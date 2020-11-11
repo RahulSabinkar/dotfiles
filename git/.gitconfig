@@ -1,0 +1,10 @@
+[user]
+	name = Rahul Sabinkar
+	email = rahulsabinkar4u@gmail.com
+[core]
+	editor = vim
+	autocrlf = input
+[diff]
+	tool = vimdiff
+[credential]
+	helper = cache

@@ -1,0 +1,68 @@
+#!/bin/sh
+
+# Use neovim for vim if present.
+ [ -x "$(command -v nvim)" ] && alias vim="nvim" vimdiff="nvim -d"
+
+# # ex - archive extractor
+# # usage: ex <file>
+ex ()
+{
+  if [ -f $1 ] ; then
+    case $1 in
+      *.tar.bz2)   tar xjf $1   ;;
+      *.tar.gz)    tar xzf $1   ;;
+      *.tar.xz)    tar xJf $1   ;;
+      *.bz2)       bunzip2 $1   ;;
+      *.rar)       unrar x $1     ;;
+      *.gz)        gunzip $1    ;;
+      *.tar)       tar xf $1    ;;
+      *.tbz2)      tar xjf $1   ;;
+      *.tgz)       tar xzf $1   ;;
+      *.zip)       unzip $1     ;;
+      *.Z)         uncompress $1;;
+      *.7z)        7z x $1      ;;
+      *)           echo "'$1' cannot be extracted via ex()" ;;
+    esac
+  else
+    echo "'$1' is not a valid file"
+  fi
+}
+
+# Some aliases
+alias mkd="mkdir -pv"
+alias cp="cp -iv"
+alias mv="mv -iv"
+alias rm="rm -vI"
+alias reload="source ~/.config/zsh/.zshrc"
+
+# Adding color
+alias ls='ls -hN --color=auto --group-directories-first'
+alias dir='dir -hN --color=auto --group-directories-first'
+alias grep="grep --color=auto"
+alias diff="diff --color=auto"
+alias ccat="highlight --out-format=ansi"
+
+# Internet
+alias yt="youtube-dl --add-metadata -i"
+alias yta="youtube-dl -x -f bestaudio/best"
+alias YT="youtube-viewer"
+
+# Suckless Hacking
+alias edit="vim config.h"
+alias doit="sudo make clean install"
+alias save="cp config.h config.def.h"
+alias fallback="cp config.def.h config.h"
+alias change="diff config.def.h config.h"
+
+# Pacman
+alias p="pacman"
+alias ps="sudo pacman -S"
+alias pss="pacman -Ss"
+
+# Shortcuts
+alias vimrc="nvim ~/.vimrc"
+alias nvimrc="nvim ~/.config/nvim/init.vim"
+
+# Config Shortcuts
+alias cf="cd ~/.config/"
+alias cfd="cd ~/.config/dwm/"
