@@ -33,6 +33,8 @@ alias mkd="mkdir -pv"
 alias cp="cp -iv"
 alias mv="mv -iv"
 alias rm="rm -vI"
+alias ll="ls -al"
+alias la="ls -a"
 alias reload="source ~/.config/zsh/.zshrc"
 
 # Adding color
