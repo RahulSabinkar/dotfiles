@@ -24,6 +24,9 @@
 # Easy on the eyes
  redshift &
 
+# Notification daemon
+ dunst &
+
 # Loop for DWM
  while true; do
 	dwm >/dev/null 2>&1
