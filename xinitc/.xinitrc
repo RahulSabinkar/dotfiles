@@ -9,6 +9,9 @@
 # Slstatus
  slstatus &
 
+# Script for setting wallpaper
+ setbg &
+
 # Compositor
  xcompmgr &
 
@@ -16,7 +19,7 @@
   xrdb ${XDG_CONFIG_HOME:-$HOME/.config}/Xresources &
 
 # Wallpaper
- nitrogen --restore &
+# nitrogen --restore &
 
 # Hide mouse pointer when idle for 5 seconds
  unclutter &

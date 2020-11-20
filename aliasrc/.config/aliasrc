@@ -36,6 +36,7 @@ alias rm="rm -vI"
 alias ll="ls -al"
 alias la="ls -a"
 alias reload="source ~/.config/zsh/.zshrc"
+alias sdn="shutdown now"
 
 # Adding color
 alias ls='ls -hN --color=auto --group-directories-first'
