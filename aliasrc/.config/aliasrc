@@ -69,3 +69,6 @@ alias nvimrc="nvim ~/.config/nvim/init.vim"
 # Config Shortcuts
 alias cf="cd ~/.config/"
 alias cfd="cd ~/.config/dwm/"
+alias cj="cd ~/projects/basics/java/practice/"
+
+se() { du -a ~/.scripts/* ~/dotfiles/* ~/projects/basics/* | awk '{print $2}' | fzf | xargs -r $EDITOR ;}
