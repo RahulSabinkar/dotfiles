@@ -5,8 +5,8 @@
 # Adds `~/.local/bin` to $PATH
 export PATH="$PATH:$(du "$HOME/.local/bin" | cut -f2 | paste -sd ':')"
 export PATH="$PATH:$(du "$HOME/.scripts/" | cut -f2 | paste -sd ':')"
-export PATH="$PATH:$(du "$HOME/IdeaJ/idea-IC-203.5981.155/bin/" | cut -f2 | paste -sd ':')"
-#export PATH="$PATH:$(du "$HOME/development/eclipse/java-2020-09/eclipse" | cut -f2 | paste -sd ':')"
+export PATH="$PATH:$(du "$HOME/intellij/bin/" | cut -f2 | paste -sd ':')"
+# export PATH="$PATH:$(du "$HOME/development/eclipse/java-2020-09/eclipse" | cut -f2 | paste -sd ':')"
 
 # Default programs:
 export EDITOR="nvim"
