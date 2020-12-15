@@ -1,133 +1,149 @@
-alsa-plugins 1:1.2.2-2
-alsa-utils 1.2.4-2
-amd-ucode 20201023.dae4b4c-1
-autoconf 2.69-7
-automake 1.16.2-3
-base 2-2
-binutils 2.35.1-1
-bison 3.7.2-1
-cmatrix 2.0-2
-dialog 1:1.3_20200327-1
-discord 0.0.12-2
-dosfstools 4.1-3
-dunst 1.5.0-1
-efibootmgr 17-2
-fakeroot 1.25.3-1
-ffmpegthumbnailer 2.2.2-2
-figlet 2.2.5-4
-firefox 82.0.3-1
-flex 2.6.4-3
-gcc 10.2.0-3
-geany 1.37-1
-geany-plugins 1.37-2
-git 2.29.2-1
-gpick 0.2.6rc1-8
-groff 1.22.4-3
-grub 2:2.04-8
-gst-plugins-base-libs 1.18.1-1
-highlight 3.58-1
-htop 3.0.2-1
-jdk-openjdk 14.0.2.u12-1
-lib32-alsa-lib 1.2.4-2
-lib32-alsa-plugins 1.2.2-1
-lib32-giflib 5.2.1-1
-lib32-gnutls 3.6.15-1
-lib32-gst-plugins-base-libs 1.16.2-1
-lib32-gtk3 3.24.23-1
-lib32-libgcrypt 1.8.7-1
-lib32-libgpg-error 1.38-1
-lib32-libjpeg-turbo 2.0.5-1
-lib32-libldap 2.4.54-1
-lib32-libpng 1.6.37-3
-lib32-libpulse 13.99.3-1
-lib32-libva 2.8.0-1
-lib32-libxcomposite 0.4.5-1
-lib32-libxinerama 1.1.4-1
-lib32-libxslt 1.1.34-1
-lib32-mpg123 1.26.3-1
-lib32-ncurses 6.2-1
-lib32-ocl-icd 2.2.13-1
-lib32-openal 1.21.0-1
-lib32-sqlite 3.33.0-1
-lib32-v4l-utils 1.20.0-1
-lib32-vulkan-icd-loader 1.2.158-1
-libappimage 1.0.3-1
-libreoffice-fresh 7.0.3-2
-libtool 2.4.6+42+gb88cebd5-14
-libxslt 1.1.34-5
-linux 5.9.8.arch1-1
-linux-firmware 20201023.dae4b4c-1
-linux-headers 5.9.8.arch1-1
-lutris 0.5.7.1-1
-m4 1.4.18-3
-maim 5.6.3-2
-make 4.3-3
-man-db 2.9.3-1
-mate-calc 1.24.1-1
-mlocate 0.26.git.20170220-5
-mousepad 0.4.2-3
-mpc 0.33-3
-mpd 0.22.3-1
-mpv 1:0.32.0-5
-mtools 4.0.25-1
-neofetch 7.1.0-2
-neovim 0.4.4-1
-network-manager-applet 1.18.0-1
-networkmanager 1.26.4-1
-newsboat 2.21-1
-nitrogen 1.6.1-3
-noto-fonts-emoji 20200916-1
-ocl-icd 2.2.13-1
-pamixer 1.4-3
-patch 2.7.6-8
-pcmanfm 1.3.1-2
-pkgconf 1.7.3-1
-playerctl 2.2.1-1
-pulseaudio 13.99.3-1
-pulsemixer 1.5.1-1
-qbittorrent 4.3.0-1
-ranger 1.9.3-2
-redshift 1.12-3
-refind 0.12.0-6
-reflector 2020.9-1
-rxvt-unicode 9.22-10
-screenfetch 3.9.1-1
-signal-desktop 1.37.3-1
-simplescreenrecorder 0.4.2-1
-stow 2.3.1-3
-sudo 1.9.3.p1-1
-sxiv 26-1
-termdown 1.17.0-1
-terminator 1.92-2
-texinfo 6.7-3
-ttf-font-awesome 5.15.1-1
-ttf-joypixels 6.0.0-1
-ueberzug 18.1.6-2
-uget 2.2.3-1
-unclutter 1:1.5-2
-unrar 1:6.0.2-1
-unzip 6.0-14
-vim 8.2.1704-1
-w3m 0.5.3.git20200507-2
-wget 1.20.3-3
-which 2.21-5
-wine-staging 5.21-1
-xclip 0.13-3
-xcompmgr 1.1.8-2
-xdg-user-dirs 0.17-3
-xdg-utils 1.1.3+19+g9816ebb-1
-xdotool 3.20160805.1-3
-xfce4-taskmanager 1.2.3-1
-xorg-server 1.20.9-2
-xorg-xev 1.2.4-1
-xorg-xfd 1.1.3-2
-xorg-xfontsel 1.0.6-3
-xorg-xinit 1.4.1-3
-xorg-xkill 1.0.5-2
-xorg-xsetroot 1.1.2-2
-youtube-dl 2020.11.01.1-1
-youtube-viewer 1:3.8.0-1
-zathura 0.4.7-1
-zathura-pdf-mupdf 0.3.6-2
-zsh 5.8-1
-zsh-autosuggestions 0.6.4-1
+alsa-plugins
+alsa-utils
+amd-ucode
+audacious
+autoconf
+automake
+base
+binutils
+bison
+calcurse
+cmatrix
+dialog
+discord
+dosfstools
+dunst
+efibootmgr
+element-desktop
+elinks
+fakeroot
+falkon
+ffmpegthumbnailer
+figlet
+firefox
+flex
+fzf
+gcc
+geany
+geany-plugins
+git
+gparted
+gpick
+groff
+grub
+gst-plugins-base-libs
+highlight
+htop
+hwinfo
+jdk-openjdk
+kdenlive
+lib32-alsa-lib
+lib32-alsa-plugins
+lib32-giflib
+lib32-gnutls
+lib32-gst-plugins-base-libs
+lib32-gtk3
+lib32-libgcrypt
+lib32-libgpg-error
+lib32-libjpeg-turbo
+lib32-libldap
+lib32-libpng
+lib32-libpulse
+lib32-libva
+lib32-libxcomposite
+lib32-libxinerama
+lib32-libxslt
+lib32-mpg123
+lib32-ncurses
+lib32-ocl-icd
+lib32-openal
+lib32-sqlite
+lib32-v4l-utils
+lib32-vulkan-icd-loader
+libappimage
+libreoffice-fresh
+libtool
+libxslt
+links
+linux
+linux-firmware
+linux-headers
+m4
+maim
+make
+man-db
+mate-calc
+midori
+mlocate
+mousepad
+mpc
+mpd
+mpv
+mtools
+ncdu
+neofetch
+neovim
+network-manager-applet
+networkmanager
+newsboat
+noto-fonts-emoji
+ocl-icd
+pamixer
+patch
+pcmanfm
+pdfjs
+pepper-flash
+pkgconf
+playerctl
+pulseaudio
+pulsemixer
+qbittorrent
+ranger
+redshift
+refind
+reflector
+rxvt-unicode
+screenfetch
+signal-desktop
+simplescreenrecorder
+stow
+sudo
+sxiv
+termdown
+terminator
+texinfo
+torbrowser-launcher
+ttf-font-awesome
+ttf-jetbrains-mono
+ttf-joypixels
+ueberzug
+uget
+unclutter
+unrar
+unzip
+vim
+w3m
+wget
+which
+wine-staging
+xarchiver
+xclip
+xcompmgr
+xdg-user-dirs
+xdg-utils
+xdotool
+xfce4-taskmanager
+xorg-server
+xorg-xev
+xorg-xfd
+xorg-xfontsel
+xorg-xinit
+xorg-xkill
+xorg-xsetroot
+xwallpaper
+youtube-dl
+youtube-viewer
+zathura
+zathura-pdf-mupdf
+zsh
+zsh-autosuggestions

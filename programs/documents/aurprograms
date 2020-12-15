@@ -1,13 +1,14 @@
-brave-bin 1:1.15.76-1
-lf 17-1
-libxft-bgra-git 2.3.3.r112.dcd637d-1
-nerd-fonts-source-code-pro 2.1.0-2
-runelite-launcher-appimage 2.1.5-2
-spaceship-prompt-git v3.11.2.r22.g988342e-1
-stacer 1.1.0-1
-ttf-inconsolata-g 20090213-4
-ttf-ms-fonts 2.0-12
-ttf-symbola 13.00-7
-wttr 1.2.1-2
-yay 10.1.0-1
-zsh-fast-syntax-highlighting 1.55-2
+brave-bin
+eclipse-java-bin
+lf
+libxft-bgra-git
+nerd-fonts-source-code-pro
+runelite-launcher
+spaceship-prompt-git
+stacer
+ttf-inconsolata-g
+ttf-ms-fonts
+ttf-symbola
+wttr
+yay
+zsh-fast-syntax-highlighting
