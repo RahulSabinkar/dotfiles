@@ -29,9 +29,9 @@
  dunst &
 
 # Loop for DWM
- while true; do
-	dwm >/dev/null 2>&1
- done
+# while true; do
+#   dwm >/dev/null 2>&1
+# done
 
 # Execute DWM
  exec dwm
