@@ -71,4 +71,10 @@ alias cf="cd ~/.config/"
 alias cfd="cd ~/.config/dwm/"
 alias cj="cd ~/projects/basics/java/practice/"
 
+# Game Shortcuts
+alias gta4="sudo timedatectl set-ntp false && sudo timedatectl set-time '20-01-01'"
+alias reset="sudo timedatectl set-ntp true"
+alias nfs="xrandr --output VGA-1 --mode 1024x768"
+alias quitnfs="xrandr --output VGA-1 --mode 1366x768"
+
 se() { du -a ~/.scripts/* ~/dotfiles/* ~/projects/basics/* | awk '{print $2}' | fzf | xargs -r $EDITOR ;}
