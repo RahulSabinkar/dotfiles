@@ -1,5 +1,9 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =3
+let g:netrw_dirhistcnt =7
+let g:netrw_dirhist_7='/home/ray/dotfiles/launchers/.local/share/applications/wine/Programs/Steam'
+let g:netrw_dirhist_6='/home/ray/dotfiles/launchers/.local/share/applications/wine/Programs'
+let g:netrw_dirhist_5='/home/ray/dotfiles/launchers/.local/share/applications/wine'
+let g:netrw_dirhist_4='/home/ray/lukebuild/scripts'
 let g:netrw_dirhist_3='/home/ray/dotfiles/dmenu/.config/dmenu'
 let g:netrw_dirhist_2='/home/ray/.config/dmenu'
 let g:netrw_dirhist_1='/home/ray/.config/menus/applications-merged'
