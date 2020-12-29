@@ -115,10 +115,10 @@ endif
 map <leader>o :setlocal spell! spelllang=en_us<CR>
 
 " Shortcutting split navigation, saving a keypress:
-map <leader>h <C-w>h
-map <leader>j <C-w>j
-map <leader>k <C-w>k
-map <leader>l <C-w>l
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
 nnoremap <silent> <Leader>= : vertical resize +5<CR>
 nnoremap <silent> <Leader>- : vertical resize -5<CR>
 
@@ -141,3 +141,5 @@ autocmd BufWritepre * %s/\n\+\%$//e
 
 " Run xrdb whenever Xdefaults or Xresources are updated.
 autocmd BufWritePost *Xresources,*Xdefaults !xrdb %
+autocmd BufWritePost ~/.config/dwmblocks/config.h !cd ~/.config/dwmblocks/; sudo -A make clean install && { killall -q dwmblocks;setsid dwmblocks & }
+autocmd BufWritePost ~/.config/dwm/config.h !cd ~/.config/dwm/; sudo -A make clean install && cd && { killall -q dwm;setsid dwm & }

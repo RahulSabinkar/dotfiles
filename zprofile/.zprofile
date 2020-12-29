@@ -3,7 +3,7 @@
 # zsh profile file. Runs on login. Environmental variables are set here.
 
 # Adds `~/.local/bin` to $PATH
-export PATH="$PATH:$(du "$HOME/.local/bin" | cut -f2 | paste -sd ':')"
+export PATH="$PATH:$(du "$HOME/.local/bin/" | cut -f2 | paste -sd ':')"
 export PATH="$PATH:$(du "$HOME/.scripts/" | cut -f2 | paste -sd ':')"
 export PATH="$PATH:$(du "$HOME/intellij/bin/" | cut -f2 | paste -sd ':')"
 # export PATH="$PATH:$(du "$HOME/development/eclipse/java-2020-09/eclipse" | cut -f2 | paste -sd ':')"
@@ -11,7 +11,7 @@ export PATH="$PATH:$(du "$HOME/intellij/bin/" | cut -f2 | paste -sd ':')"
 # Default programs:
 export EDITOR="nvim"
 export TERMINAL="st"
-export BROWSER="firefox"
+export BROWSER="brave"
 export READER="zathura"
 
 # ~/ Clean-up:

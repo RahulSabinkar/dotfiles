@@ -8,3 +8,5 @@
 	tool = vimdiff
 [credential]
 	helper = cache
+[alias]
+	lg = log --oneline --all --graph

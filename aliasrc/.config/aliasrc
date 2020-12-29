@@ -35,6 +35,7 @@ alias mv="mv -iv"
 alias rm="rm -vI"
 alias ll="ls -al"
 alias la="ls -a"
+alias ka="killall"
 alias reload="source ~/.config/zsh/.zshrc"
 alias sdn="shutdown now"
 
@@ -70,6 +71,8 @@ alias nvimrc="nvim ~/.config/nvim/init.vim"
 alias cf="cd ~/.config/"
 alias cfd="cd ~/.config/dwm/"
 alias cj="cd ~/projects/basics/java/practice/"
+alias cld="cd ~/othersbuilds/lukebuilds/dwm-1/"
+alias cfu="nvim ~/.config/newsboat/urls"
 
 # Game Shortcuts
 alias gta4="sudo timedatectl set-ntp false && sudo timedatectl set-time '20-01-01'"
