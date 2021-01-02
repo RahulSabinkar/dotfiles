@@ -5,7 +5,7 @@ setbg & # Script to set wallpaper on startup
 #lxsession & # Gtk Polkit Authentication Agent
 #volumeicon & # Volume Tray
 xcompmgr & # Lightweight Compositor
-#picom &
+# picom &
 unclutter & # Hide mouse pointer when idle for 5 seconds
 redshift & # Reduces eye strain by slightly changing display colors
 dunst & # Notification daemon

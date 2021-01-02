@@ -1,7 +1,8 @@
 #!/bin/sh
 
 # Use neovim for vim if present.
- [ -x "$(command -v nvim)" ] && alias vim="nvim" vimdiff="nvim -d"
+ [ -x "$(command -v nvim)" ] && alias vim="nvim" vimdiff="nvim -d" &&
+     alias v="nvim" vdiff="nvim -d"
 
 # # ex - archive extractor
 # # usage: ex <file>

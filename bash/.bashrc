@@ -72,38 +72,10 @@ set -o vi
 #Infinite History
 HISTSIZE= HISTFILESIZE=
 
-# Some aliases
-alias mkd="mkdir -pv"
-alias cp="cp -iv"
-alias reload="source ~/.bashrc"
+source ~/.config/aliasrc
 
-# Adding color
-alias ls='ls -hN --color=auto --group-directories-first'
-alias dir='dir -hN --color=auto --group-directories-first'
-alias grep="grep --color=auto"
-alias diff="diff --color=auto"
-alias ccat="highlight --out-format=ansi"
+# Use bash-completion, if available
+[[ $PS1 && -f /usr/share/bash-completion/bash_completion ]] && \
+    . /usr/share/bash-completion/bash_completion
 
-# Internet
-alias yt="youtube-dl --add-metadata -ic"
-alias yta="youtube-dl --add-metadata -xic"
-
-# Suckless Hacking
-alias edit="vim config.h"
-alias doit="sudo make clean install"
-alias save="cp config.h config.def.h"
-alias fallback="cp config.def.h config.h"
-alias change="diff config.def.h config.h"
-
-# Pacman
-alias p="pacman"
-alias sp="sudo pacman"
-
-# Shortcuts
-alias bc="nvim ~/.bashrc"
-alias vimrc="nvim ~/.vimrc"
-alias nvimrc="nvim ~/.config/nvim/init.vim"
-
-# Config Shortcuts
-alias cfd="cd ~/.config/dwm/"
-eval "$(starship init bash)"
+# eval "$(starship init bash)"

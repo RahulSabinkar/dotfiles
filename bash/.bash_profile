@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 
 # zsh profile file. Runs on login. Environmental variables are set here.
 

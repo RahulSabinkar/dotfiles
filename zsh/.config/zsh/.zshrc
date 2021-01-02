@@ -3,13 +3,13 @@
 # |_  / __| '_ \| '__/ __|
 #  / /\__ \ | | | | | (__
 # /___|___/_| |_|_|  \___|
-#
-# Taken from Luke's, Broodie's, and ChrisTitus's configs
+# My zsh config. Taken from Luke's, Broodie's, and ChrisTitus's configs
+
 # Enable colors and change prompt:
 autoload -U colors && colors	# Load colors
 PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
-# setopt autocd		# Automatically cd into typed directory.
-# stty stop undef		# Disable ctrl-s to freeze terminal.
+setopt autocd		# Automatically cd into typed directory.
+stty stop undef		# Disable ctrl-s to freeze terminal.
 
 # History in cache directory:
 HISTSIZE=10000
@@ -87,8 +87,6 @@ bindkey -s '^t' 'cd /home/ray/.config/st && nvim config.h\n'
 bindkey -s '^a' 'nvim /home/ray/.config/aliasrc\n'
 
 bindkey -s '^n' 'cd /home/ray/.config/nvim && nvim init.vim\n'
-
-bindkey -s '^w' 'cd /home/ray/.config/dwm && nvim config.h\n'
 
 # Edit line in vim with ctrl-e:
 autoload edit-command-line; zle -N edit-command-line

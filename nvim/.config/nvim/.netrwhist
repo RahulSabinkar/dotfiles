@@ -1,12 +1,12 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =6
+let g:netrw_dirhistcnt =0
+let g:netrw_dirhist_0='/home/ray/othersbuilds/lukebuilds/voidrice'
+let g:netrw_dirhist_9='/home/ray/othersbuilds/lukebuilds'
+let g:netrw_dirhist_8='/home/ray/.config/st'
+let g:netrw_dirhist_7='/home/ray/.scripts'
 let g:netrw_dirhist_6='/home/ray/othersbuilds/lukebuilds/voidrice/.local/bin/cron'
 let g:netrw_dirhist_5='/home/ray/.config/dwmblocks'
 let g:netrw_dirhist_4='/home/ray/.config/st'
 let g:netrw_dirhist_3='/home/ray/.local/bin/statusbar'
 let g:netrw_dirhist_2='/home/ray/.config/dwmblocks'
 let g:netrw_dirhist_1='/home/ray/.local/bin/statusbar'
-let g:netrw_dirhist_0='/home/ray/.config/dwm'
-let g:netrw_dirhist_9='/home/ray/downloads/dwm'
-let g:netrw_dirhist_8='/home/ray/downloads'
-let g:netrw_dirhist_7='/home/ray/dotfiles/launchers/.local/share/applications/wine/Programs/Steam'
