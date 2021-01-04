@@ -154,3 +154,21 @@
 /* *.background: .color0 */
 /* *.color256: 0#1d2021 */
 /* *.color257: 15#ebdbb2 */
+
+!! Broodie Robertson's Xresources palette
+/* *.color0:       #2d2d2d */
+/* *.color8:       #444444 */
+/* *.color1:       #ed0b0b */
+/* *.color9:       #b55454 */
+/* *.color2:       #40a62f */
+/* *.color10:      #78a670 */
+/* *.color3:       #f2e635 */
+/* *.color11:      #faf380 */
+/* *.color4:       #268bd2 */
+/* *.color12:      #68a7d4 */
+/* *.color5:       #b30ad0 */
+/* *.color13:      #c583d0 */
+/* *.color6:       #32d0fc */
+/* *.color14:      #8adaf1 */
+/* *.color7:       #555555 */
+/* *.color15:      #e0e3e7 */

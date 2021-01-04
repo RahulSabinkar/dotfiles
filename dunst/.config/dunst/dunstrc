@@ -299,14 +299,14 @@
     foreground = "#ffffff"
     timeout = 10
     # Icon for notifications with low urgency, uncomment to enable
-    icon = /home/ray/.config/dunst/normal.png
+    //icon = /home/ray/.config/dunst/normal.png
 
 [urgency_normal]
     background = "#285577"
     foreground = "#ffffff"
     timeout = 10
     # Icon for notifications with normal urgency, uncomment to enable
-    icon = /home/ray/.config/dunst/normal.png
+    //icon = /home/ray/.config/dunst/normal.png
 
 [urgency_critical]
     background = "#900000"

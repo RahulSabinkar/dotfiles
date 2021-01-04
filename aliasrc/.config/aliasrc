@@ -60,7 +60,7 @@ alias fallback="cp config.def.h config.h"
 alias change="diff config.def.h config.h"
 
 # Pacman
-alias p="pacman"
+alias p="sudo pacman"
 alias ps="sudo pacman -S"
 alias pss="pacman -Ss"
 
