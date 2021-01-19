@@ -22,6 +22,7 @@ text/html=text.desktop;
 text/xml=text.desktop;
 application/json=text.desktop;
 application/pdf=org.pwmt.zathura.desktop;
+text/x-c++src=mousepad.desktop
 
 [Added Associations]
 text/plain=mousepad.desktop;
@@ -39,3 +40,5 @@ application/xhtml+xml=firefox.desktop;
 application/x-extension-xhtml=firefox.desktop;
 application/x-extension-xht=firefox.desktop;
 x-scheme-handler/tg=userapp-Telegram Desktop-BVB2V0.desktop;
+text/x-c++src=mousepad.desktop;
+application/x-ms-dos-executable=mousepad.desktop;

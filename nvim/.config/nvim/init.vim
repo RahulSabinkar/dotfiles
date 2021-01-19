@@ -14,6 +14,7 @@ Plug 'tpope/vim-commentary'
 Plug 'Raimondi/delimitMate'
 Plug 'ap/vim-css-color'
 Plug 'vim-utils/vim-man'
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
 "" Vim-Session
 "Plug 'xolox/vim-misc'
@@ -24,6 +25,9 @@ call plug#end()
 "*****************************************************************************
 "" Plug Settings
 "*****************************************************************************
+
+let g:mkdp_refresh_slow = 0
+let g:mkdp_browser = 'brave'
 
 " Expansion between parenthesis
 let delimitMate_expand_cr = 1
@@ -75,6 +79,9 @@ filetype plugin indent on
 vmap < <gv
 vmap > >gv
 
+" Replace ex mode with gq
+map Q gq
+
 "" Move visual block
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
@@ -111,6 +118,14 @@ endif
 "" Leader Keybindings
 "*****************************************************************************
 
+" Compile document, be it groff/LaTeX/markdown/etc.
+map <leader>c :w! \| !compiler "<c-r>%"<CR>
+
+" Open corresponding .pdf/.html or preview
+" map <leader>p :!opout <c-r>%<CR><CR>
+
+nmap <leader>p <Plug>MarkdownPreviewToggle
+
 " Spell-check set to <leader>o, 'o' for 'orthography':
 map <leader>o :setlocal spell! spelllang=en_us<CR>
 
@@ -122,15 +137,20 @@ map <C-l> <C-w>l
 nnoremap <silent> <Leader>= : vertical resize +5<CR>
 nnoremap <silent> <Leader>- : vertical resize -5<CR>
 
-" Replace ex mode with gq
-"	map Q gq
-
 " Check file in shellcheck:
 map <leader>s :!clear && shellcheck %<CR>
 
 "*****************************************************************************
 "" Convenience
 "*****************************************************************************
+
+" Ensure files are read as what I want:
+	let g:vimwiki_ext2syntax = {'.Rmd': 'markdown', '.rmd': 'markdown','.md': 'markdown', '.markdown': 'markdown', '.mdown': 'markdown'}
+	map <leader>v :VimwikiIndex
+	let g:vimwiki_list = [{'path': '~/vimwiki', 'syntax': 'markdown', 'ext': '.md'}]
+	autocmd BufRead,BufNewFile /tmp/calcurse*,~/.calcurse/notes/* set filetype=markdown
+	autocmd BufRead,BufNewFile *.ms,*.me,*.mom,*.man set filetype=groff
+	autocmd BufRead,BufNewFile *.tex set filetype=tex
 
 " Save file as sudo on files that require root permission
 cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
@@ -141,5 +161,7 @@ autocmd BufWritepre * %s/\n\+\%$//e
 
 " Run xrdb whenever Xdefaults or Xresources are updated.
 autocmd BufWritePost *Xresources,*Xdefaults !xrdb %
+" Recompile dwmblocks on config edit.
 autocmd BufWritePost ~/.config/dwmblocks/config.h !cd ~/.config/dwmblocks/; sudo -A make clean install && { killall -q dwmblocks;setsid dwmblocks & }
+" Recompile dwm on config edit.
 autocmd BufWritePost ~/.config/dwm/config.h !cd ~/.config/dwm/; sudo -A make clean install && cd && { killall -q dwm;setsid dwm & }
