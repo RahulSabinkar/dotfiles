@@ -71,6 +71,7 @@ alias nvimrc="nvim ~/.config/nvim/init.vim"
 # Config Shortcuts
 alias cf="cd ~/.config/"
 alias cfd="cd ~/.config/dwm/"
+alias cfk="cd .config/kernel/linux-5.10.9/"
 alias cj="cd ~/projects/basics/java/practice/"
 alias cld="cd ~/othersbuilds/lukebuilds/dwm-1/"
 alias cfu="nvim ~/.config/newsboat/urls"
