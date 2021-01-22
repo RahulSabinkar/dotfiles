@@ -61,9 +61,6 @@ export PS1="\[$(tput bold)\]\[\e[31m\][\[\e[m\]\[$(tput bold)\]\[\e[33m\]\u\[\e[
 
 # PS1='[\u@\h \W]\$ '
 
-# Use neovim for vim if present.
- [ -x "$(command -v nvim)" ] && alias vim="nvim" vimdiff="nvim -d"
-
 #Allows you to cd into directory by just typing the directory name
 shopt -s autocd
 
