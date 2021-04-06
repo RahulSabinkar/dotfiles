@@ -1,0 +1,9 @@
+Install our keyring from AUR or download pre-built from here.
+Install our mirrorlist from AUR or download pre-built from here.
+Append to /etc/pacman.conf:
+
+[chaotic-aur]
+Include = /etc/pacman.d/chaotic-mirrorlist
+
+Programs:
+ungoogled-chromium
