@@ -164,4 +164,4 @@ autocmd BufWritePost *Xresources,*Xdefaults !xrdb %
 " Recompile dwmblocks on config edit.
 autocmd BufWritePost ~/.config/dwmblocks/config.h !cd ~/.config/dwmblocks/; sudo -A make clean install && { killall -q dwmblocks;setsid dwmblocks & }
 " Recompile dwm on config edit.
-autocmd BufWritePost ~/.config/dwm/config.h !cd ~/.config/dwm/; sudo -A make clean install && cd && { killall -q dwm;setsid dwm & }
+" autocmd BufWritePost ~/.config/dwm/config.h !cd ~/.config/dwm/; sudo -A make clean install && cd && { killall -q dwm;setsid dwm & }

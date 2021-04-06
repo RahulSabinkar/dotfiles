@@ -73,7 +73,7 @@ pacman-contrib
 pamixer
 pandoc
 patch
-pcmanfm
+pcmanfm-gtk3
 pkgconf
 playerctl
 ppsspp

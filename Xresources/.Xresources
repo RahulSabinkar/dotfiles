@@ -173,6 +173,7 @@
 /* *.color7:       #555555 */
 /* *.color15:      #e0e3e7 */
 
+! Google Dark
 ! special
 *.foreground:   #c5c8c6
 *.background:   #1d1f21
