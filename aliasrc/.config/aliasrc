@@ -63,6 +63,8 @@ alias change="diff config.def.h config.h"
 alias p="sudo pacman"
 alias ps="sudo pacman -S"
 alias pss="pacman -Ss"
+alias psi="pacman -Si"
+alias pq="pacman -Qs"
 
 # Shortcuts
 alias vimrc="nvim ~/.vimrc"

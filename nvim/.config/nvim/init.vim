@@ -64,7 +64,7 @@ set shiftwidth=4
 set smartindent
 set scrolloff=6 "cursor doesn't go the borders
 set encoding=utf-8
-set number relativenumber "relative numbers at the left side
+set number "numbers at the left side
 set go=a
 set mouse=a
 set incsearch "when searching, shows words as you type
