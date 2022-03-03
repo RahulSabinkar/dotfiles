@@ -1,7 +1,0 @@
-#!/bin/bash
-sudo hwclock -show
-if sudo hwclock --show | grep '2020-01-01'=/dev/null; then
-    sudo timedatectl set-time '20-01-01'
-else
-    timedatectl set-ntp true
-fi

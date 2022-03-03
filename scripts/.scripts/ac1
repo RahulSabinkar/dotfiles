@@ -1,3 +1,0 @@
-#!/bin/bash
-cd /home/ray/games/Assassins.Creed/Assassin\'s\ Creed &&
-WINEPREFIX=/home/ray/games/Assassins.Creed wine AssassinsCreed_Dx9.exe
