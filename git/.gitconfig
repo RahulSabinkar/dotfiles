@@ -10,3 +10,7 @@
 	helper = cache
 [alias]
 	lg = log --oneline --all --graph
+[pull]
+	rebase = false
+[init]
+	defaultBranch = main
