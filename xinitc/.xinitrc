@@ -1,18 +1,16 @@
 #!/bin/sh
 # xautolock -time 10 -locker slock
-keymap & # Script for switching caps with escape and increasing key rate delays
+xrandr --dpi 96		# Set DPI. User may want to use a larger number for larger screens.
 setbg & # Script to set wallpaper on startup
-lxpolkit & # Gtk Polkit Authentication Agent
-xcompmgr & # Lightweight Compositor
-xrdb ~/.Xresources &
-# picom &
-unclutter & # Hide mouse pointer when idle for 5 seconds
-redshift & # Reduces eye strain by slightly changing display colors
-dunst & # Notification daemon
-clipmenud &
-# transmission-daemon &
-#slstatus &
-dwmblocks &
+keymap & # Script for switching/replacing capslock with escape and increasing key rate delays
+#xrdb ~/.Xresources & # Adds theme
+
+autostart="dwmblocks redshift peer2profit xcompmgr lxpolkit unclutter dunst clipmenud /usr/lib/kdeconnectd"
+
+for program in $autostart; do
+	pidof -s "$program" || setsid -f "$program"
+done >/dev/null 2>&1
+
 # Loop for DWM
  while true; do
    dwm >/dev/null 2>&1
