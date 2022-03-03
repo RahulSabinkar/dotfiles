@@ -14,7 +14,7 @@ ex ()
       *.tar.gz)    tar xzf $1   ;;
       *.tar.xz)    tar xJf $1   ;;
       *.bz2)       bunzip2 $1   ;;
-      *.rar)       unrar x $1     ;;
+      *.rar)       unrar x $1   ;;
       *.gz)        gunzip $1    ;;
       *.tar)       tar xf $1    ;;
       *.tbz2)      tar xjf $1   ;;
@@ -39,6 +39,7 @@ alias la="ls -a"
 alias ka="killall"
 alias reload="source ~/.config/zsh/.zshrc"
 alias sdn="shutdown now"
+alias bell="mpv ~/music/bell.m4a"
 
 # Adding color
 alias ls='ls -hN --color=auto --group-directories-first'
@@ -48,9 +49,9 @@ alias diff="diff --color=auto"
 alias ccat="highlight --out-format=ansi"
 
 # Internet
-alias yt="youtube-dl --add-metadata -i"
-alias yta="youtube-dl -x -f bestaudio/best"
-alias YT="youtube-viewer"
+alias yt="yt-dlp --add-metadata -i"
+alias yta="yt-dlp -x -f bestaudio/best"
+alias YT="ytfzf"
 
 # Suckless Hacking
 alias edit="vim config.h"
@@ -62,9 +63,12 @@ alias change="diff config.def.h config.h"
 # Pacman
 alias p="sudo pacman"
 alias ps="sudo pacman -S"
+alias pr="sudo pacman -Rns"
 alias pss="pacman -Ss"
 alias psi="pacman -Si"
-alias pq="pacman -Qs"
+alias pq="pacman -Q"
+alias pqs="pacman -Qs"
+alias pqi="pacman -Qi"
 
 # Shortcuts
 alias vimrc="nvim ~/.vimrc"
@@ -73,15 +77,14 @@ alias nvimrc="nvim ~/.config/nvim/init.vim"
 # Config Shortcuts
 alias cf="cd ~/.config/"
 alias cfd="cd ~/.config/dwm/"
-alias cfk="cd .config/kernel/linux-5.10.9/"
-alias cj="cd ~/projects/basics/java/practice/"
-alias cld="cd ~/othersbuilds/lukebuilds/dwm-1/"
 alias cfu="nvim ~/.config/newsboat/urls"
 
-# Game Shortcuts
-alias gta4="sudo timedatectl set-ntp false && sudo timedatectl set-time '20-01-01'"
-alias reset="sudo timedatectl set-ntp true"
-alias nfs="xrandr --output VGA-1 --mode 1024x768"
-alias quitnfs="xrandr --output VGA-1 --mode 1366x768"
+# Tuxi
+alias what="tuxi what "
+alias when="tuxi when "
 
-se() { du -a ~/.scripts/* ~/dotfiles/* ~/projects/basics/* | awk '{print $2}' | fzf | xargs -r $EDITOR ;}
+# Other Shortcuts
+alias rice="termdown 10min && mpv music/bell.m4a & notify-send '🍚 Rice is cooked!'"
+alias anboxlaunch="anbox launch --package=org.anbox.appmgr --component=org.anbox.appmgr.AppViewActivity"
+
+se() { du -a ~/.scripts/* | awk '{print $2}' | fzf | xargs -r $EDITOR ;}
