@@ -13,6 +13,7 @@ ex ()
       *.tar.bz2)   tar xjf $1   ;;
       *.tar.gz)    tar xzf $1   ;;
       *.tar.xz)    tar xJf $1   ;;
+      *.tar.zst)   tar xvf $1  ;;
       *.bz2)       bunzip2 $1   ;;
       *.rar)       unrar x $1   ;;
       *.gz)        gunzip $1    ;;
@@ -22,6 +23,7 @@ ex ()
       *.zip)       unzip $1     ;;
       *.Z)         uncompress $1;;
       *.7z)        7z x $1      ;;
+      *.zpaq)      zpaq x $1      ;;
       *)           echo "'$1' cannot be extracted via ex()" ;;
     esac
   else
@@ -41,17 +43,24 @@ alias reload="source ~/.config/zsh/.zshrc"
 alias sdn="shutdown now"
 alias bell="mpv ~/music/bell.m4a"
 
+# Common apps
+alias r="ranger"
+alias lf="lfub"
+alias md="litemdview"
+
 # Adding color
 alias ls='ls -hN --color=auto --group-directories-first'
 alias dir='dir -hN --color=auto --group-directories-first'
 alias grep="grep --color=auto"
 alias diff="diff --color=auto"
-alias ccat="highlight --out-format=ansi"
+alias bat="bat --theme=OneHalfDark"
+alias cat="bat --theme=OneHalfDark"
 
 # Internet
-alias yt="yt-dlp --add-metadata -i"
+alias ytd="yt-dlp --add-metadata -i"
 alias yta="yt-dlp -x -f bestaudio/best"
-alias YT="ytfzf"
+alias yt="ytfzf"
+alias ds="subliminal download -s -f -l \"en\""
 
 # Suckless Hacking
 alias edit="vim config.h"
@@ -69,6 +78,7 @@ alias psi="pacman -Si"
 alias pq="pacman -Q"
 alias pqs="pacman -Qs"
 alias pqi="pacman -Qi"
+alias update="sudo pacman -Sy && sudo powerpill -Su && paru -Su"
 
 # Shortcuts
 alias vimrc="nvim ~/.vimrc"
@@ -79,12 +89,7 @@ alias cf="cd ~/.config/"
 alias cfd="cd ~/.config/dwm/"
 alias cfu="nvim ~/.config/newsboat/urls"
 
-# Tuxi
-alias what="tuxi what "
-alias when="tuxi when "
-
 # Other Shortcuts
-alias rice="termdown 10min && mpv music/bell.m4a & notify-send '🍚 Rice is cooked!'"
-alias anboxlaunch="anbox launch --package=org.anbox.appmgr --component=org.anbox.appmgr.AppViewActivity"
+alias game="ka kdeconnectd redshift-gtk lxpolkit dunst mailspring"
 
 se() { du -a ~/.scripts/* | awk '{print $2}' | fzf | xargs -r $EDITOR ;}

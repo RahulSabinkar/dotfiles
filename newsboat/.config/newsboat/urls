@@ -1,13 +1,16 @@
 ----------Blogs-------------
 http://lukesmith.xyz/rss.xml
-https://notrelated.libsyn.com/rss
+https://notrelated.xyz/rss
 ----------Linux-------------
 https://www.archlinux.org/feeds/news/ "tech"
 https://archlinux.org/feeds/planet/
+----------Proton------------
+https://proton.me/blog/feed
 "---------News--------------
 https://feeds.feedburner.com/TheHackersNews
 https://www.phoronix.com/rss.php
 ----------YouTube-----------
-https://www.youtube.com/feeds/videos.xml?channel_id=UCjr2bPAyPV7t35MvcgT3W8Q "~The Hated One"
+/_ https://www.youtube.com/feeds/videos.xml?channel_id=UCjr2bPAyPV7t35MvcgT3W8Q "~The Hated One" _/
 https://www.youtube.com/feeds/videos.xml?channel_id=UCvMVsAUHYoKVTwx5ziKjK5w "~TheSaiyan17"
-https://www.youtube.com/feeds/videos.xml?channel_id=UCz0qy7P0n4av_7LV61_lSzQ "~One Dreamer"
+----------GitHub------------
+https://github.com/pystardust/ytfzf/commits.atom

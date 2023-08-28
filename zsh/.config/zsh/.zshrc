@@ -67,18 +67,16 @@ echo -ne '\e[5 q' # Use beam shape cursor on startup.
 preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 
 # Use lf to switch directories and bind it to ctrl-o
-# lfcd () {
-#     tmp="$(mktemp)"
-#     lf -last-dir-path="$tmp" "$@"
-#     if [ -f "$tmp" ]; then
-#         dir="$(cat "$tmp")"
-#         rm -f "$tmp" >/dev/null
-#         [ -d "$dir" ] && [ "$dir" != "$(pwd)" ] && cd "$dir"
-#     fi
-# }
+lfcd () {
+    tmp="$(mktemp)"
+    lf -last-dir-path="$tmp" "$@"
+    if [ -f "$tmp" ]; then
+        dir="$(cat "$tmp")"
+        rm -f "$tmp" >/dev/null
+        [ -d "$dir" ] && [ "$dir" != "$(pwd)" ] && cd "$dir"
+    fi
+}
 # bindkey -s '^o' 'lfcd\n'
-
-# bindkey -s '^s' 'cd /home/ray/.config/slstatus && nvim config.h\n'
 
 bindkey -s '^z' 'nvim /home/ray/.config/zsh/.zshrc\n'
 
@@ -87,6 +85,8 @@ bindkey -s '^t' 'cd /home/ray/.config/st && nvim config.h\n'
 bindkey -s '^a' 'nvim /home/ray/.config/aliasrc\n'
 
 bindkey -s '^n' 'cd /home/ray/.config/nvim && nvim init.vim\n'
+
+bindkey -s '^k' 'cd /home/ray/practice/cpp && nvim program.cpp\n'
 
 # Edit line in vim with ctrl-e:
 autoload edit-command-line; zle -N edit-command-line
@@ -97,6 +97,6 @@ bindkey '^e' edit-command-line
 
 # Load syntax highlighting; should be last.
 source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh 2>/dev/null
-# source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
+
 eval "$(starship init zsh)"
-cat ~/TODO

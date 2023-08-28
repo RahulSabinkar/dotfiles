@@ -33,5 +33,5 @@ case $BLOCK_BUTTON in
 esac
 
 # date "+ %Y %b %d (%a) $icon%I:%M%p"
-date "+$dayIcon %a %b %d-%m-%y | $timeIcon %T"
+date "+$dayIcon %a %b %d-%m-%y | $timeIcon %H:%M"
 # date "+📅%a %b %d-%m-%y $icon%T"

@@ -1,0 +1,20 @@
+#!/bin/sh
+# This script checks if a reboot is required or not
+# It checks if the current running kernel instance is the same
+# version as the one installed in the /boot/vmlinuz-linux
+NEXTLINE=0
+FIND=""
+for I in `file /boot/vmlinuz*`; do
+  if [ ${NEXTLINE} -eq 1 ]; then
+    FIND="${I}"
+    NEXTLINE=0
+   else
+    if [ "${I}" = "version" ]; then NEXTLINE=1; fi
+  fi
+done
+if [ ! "${FIND}" = "" ]; then
+  CURRENT_KERNEL=`uname -r`
+  if [ ! "${CURRENT_KERNEL}" = "${FIND}" ]; then
+    echo "Boot required"
+  fi
+fi

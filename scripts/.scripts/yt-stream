@@ -1,0 +1,8 @@
+#!/bin/sh
+
+youtube_link=$(xclip -o)
+# invidous_link="invidious.kavin.rocks"
+
+notify-send -i "youtube" "Streaming" "${youtube_link}"
+# mpv --fs "${youtube_link/www.youtube.com/"$invidous_link"}"
+ytfzf -c url "${youtube_link}"

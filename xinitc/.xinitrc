@@ -1,18 +1,41 @@
 #!/bin/sh
 # xautolock -time 10 -locker slock
-xrandr --dpi 96		# Set DPI. User may want to use a larger number for larger screens.
-setbg & # Script to set wallpaper on startup
+xrandr --dpi 96	&	# Set DPI. User may want to use a larger number for larger screens.
 keymap & # Script for switching/replacing capslock with escape and increasing key rate delays
-#xrdb ~/.Xresources & # Adds theme
+xrdb ~/.Xresources & # Adds theme
+# eval $(gnome-keyring-daemon --start)
+# export SSH_AUTH_SOCK
 
-autostart="dwmblocks redshift peer2profit xcompmgr lxpolkit unclutter dunst clipmenud /usr/lib/kdeconnectd"
+/usr/bin/gnome-keyring-daemon --start --components=ssh &
 
-for program in $autostart; do
-	pidof -s "$program" || setsid -f "$program"
-done >/dev/null 2>&1
+setbg & # Script to set wallpaper on startup
+dwmblocks &
+redshift-gtk &
+# peer2profit &
+# xcompmgr &
+lxpolkit &
+unclutter &
+dunst &
+clipmenud &
+# autostart="dwmblocks redshift peer2profit xcompmgr lxpolkit unclutter dunst clipmenud"
+/usr/lib/kdeconnectd &
+mailspring -b &
+nm-applet &
+
+# for program in $autostart; do
+# 	pidof -s "$program" || setsid -f "$program"
+# done >/dev/null 2>&1
+
+# source /etc/X11/xinit/xinitrc.d/50-systemd-user.sh &
+
+systemctl --user import-environment DISPLAY XAUTHORITY
+
+if command -v dbus-update-activation-environment >/dev/null 2>&1; then
+    dbus-update-activation-environment DISPLAY XAUTHORITY
+fi
 
 # Loop for DWM
- while true; do
-   dwm >/dev/null 2>&1
- done
+ # while true; do
+ #   dwm >/dev/null 2>&1
+ # done
 exec dwm

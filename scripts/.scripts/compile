@@ -1,0 +1,59 @@
+#!/bin/sh
+
+# Arguments
+argument="$1"
+cpp_target_file="$2"
+
+# Colors used for printing
+NC='\033[0m'
+L_BLUE='\033[1;34m'
+L_GREEN='\033[1;32m'
+
+execute() {
+        printf '%bExecution:%b\n' "$L_BLUE" "$NC"
+        time ./a.out
+}
+
+execute_with_input() {
+        printf '%bTaking input from: input.txt%b\n' "$L_BLUE" "$NC"
+        printf '%bExecuting and writing to: output.txt:%b\n' "$L_BLUE" "$NC"
+        cat input.txt | (time ./a.out) > output.txt
+        printf '\n%bExecution:%b\n' "$L_BLUE" "$NC"
+        cat output.txt
+}
+
+compile() {
+        printf "%bCompiling using:\n$1%b\n" "$L_BLUE" "$NC"
+        $1 "$cpp_target_file" &&
+                printf "%bCompilation Successful!\n%b" "$L_GREEN" "$NC"
+        echo "---------------------------------------------"
+}
+
+case $argument in
+"")
+        execute
+        echo
+        ;;
+"--input")
+        execute_with_input
+        echo
+        ;;
+"--quick-compile")
+        compile 'g++ -std=c++11 -Wshadow -Wall -O2 -Wno-unused-result'
+        echo
+        ;;
+
+"--build-compile")
+        compile 'g++ -std=c++11 -Wshadow -Wall -g -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG'
+        echo
+        ;;
+
+"--compile")
+        compile 'g++'
+        echo
+        ;;
+*)
+        echo "Invalid argument"
+        echo
+        ;;
+esac

@@ -2,10 +2,17 @@
 	name = Rahul Sabinkar
 	email = rahulsabinkar4u@gmail.com
 [core]
-	editor = vim
+  editor = code --wait
 	autocrlf = input
+	excludesfile = /home/ray/.gitignore_global
 [diff]
-	tool = vimdiff
+  tool = vscode
+[difftool "vscode"]
+  cmd = code --wait --diff $LOCAL $REMOTE
+[merge]
+  tool = vscode
+[mergetool "vscode"]
+  cmd = code --wait $MERGED
 [credential]
 	helper = cache
 [alias]
@@ -14,3 +21,5 @@
 	rebase = false
 [init]
 	defaultBranch = main
+[pager]
+	log = false

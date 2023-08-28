@@ -13,8 +13,14 @@ case $BLOCK_BUTTON in
 	6) "$TERMINAL" -e "$EDITOR" "$0" ;;
 esac
 
+# Arbitrary but unique message tag
+msgTag="statusVolume"
+
 # [ $(pamixer --get-mute) = true ] && echo 🔇 && exit
-[ $(pamixer --get-mute) = true ] && echo "" && exit
+[ $(pamixer --get-mute) = true ] && echo "" &&
+    # Show the sound muted notification
+    dunstify -a "changeVolume" -u low -i audio-volume-muted -h string:x-dunst-stack-tag:$msgTag "Volume muted" &&
+    exit
 
 vol="$(pamixer --get-volume)"
 
@@ -28,12 +34,20 @@ vol="$(pamixer --get-volume)"
 
 if [ "$vol" -gt "50" ]; then
 	icon=""
+    # Show the volume notification
+    dunstify -a "changeVolume" -u low -i audio-volume-high -h string:x-dunst-stack-tag:$msgTag \
+    -h int:value:"$vol" "Volume: ${vol}%"
 # elif [ "$vol" -lt "30" ]; then
 # 	icon="奔 "
 elif [ "$vol" -eq "0" ]; then
     icon=""
+    # Show the sound muted notification
+    dunstify -a "changeVolume" -u low -i audio-volume-muted -h string:x-dunst-stack-tag:$msgTag "Volume muted"
 else
 	icon=""
+    # Show the volume notification
+    dunstify -a "changeVolume" -u low -i audio-volume-medium -h string:x-dunst-stack-tag:$msgTag \
+    -h int:value:"$vol" "Volume: ${vol}%"
 fi
 
 echo "$icon $vol%"
