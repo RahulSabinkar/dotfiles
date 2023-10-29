@@ -21,5 +21,3 @@
 	rebase = false
 [init]
 	defaultBranch = main
-[pager]
-	log = false

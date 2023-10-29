@@ -1,8 +1,8 @@
 #!/bin/sh
 # xautolock -time 10 -locker slock
-xrandr --dpi 96	&	# Set DPI. User may want to use a larger number for larger screens.
+# xrandr --dpi 192	&	# Set DPI. User may want to use a larger number for larger screens.
 keymap & # Script for switching/replacing capslock with escape and increasing key rate delays
-xrdb ~/.Xresources & # Adds theme
+xrdb -merge ~/.Xresources & # Adds display scaling and theme
 # eval $(gnome-keyring-daemon --start)
 # export SSH_AUTH_SOCK
 
@@ -13,6 +13,7 @@ dwmblocks &
 redshift-gtk &
 # peer2profit &
 # xcompmgr &
+picom &
 lxpolkit &
 unclutter &
 dunst &
@@ -35,7 +36,7 @@ if command -v dbus-update-activation-environment >/dev/null 2>&1; then
 fi
 
 # Loop for DWM
- # while true; do
- #   dwm >/dev/null 2>&1
- # done
+ while true; do
+   dwm >/dev/null 2>&1
+ done
 exec dwm

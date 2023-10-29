@@ -1,6 +1,17 @@
 !! Transparency (0-1):
 *.alpha: 0.8
 
+/* Xft.dpi: 192 */
+/* Xft.dpi: 144 */
+
+! These might also be useful depending on your monitor and personal preference:
+/* Xft.autohint: 0 */
+/* Xft.lcdfilter:  lcddefault */
+/* Xft.hintstyle:  hintfull */
+/* Xft.hinting: 1 */
+/* Xft.antialias: 1 */
+/* Xft.rgba: rgb */
+
 !! Set a default font and font size as below:
 !!*.font: monospace:size=10
 

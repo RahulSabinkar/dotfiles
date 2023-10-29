@@ -91,5 +91,6 @@ alias cfu="nvim ~/.config/newsboat/urls"
 
 # Other Shortcuts
 alias game="ka kdeconnectd redshift-gtk lxpolkit dunst mailspring"
+alias screentest="mpv --no-config --video-sync=display-resample --hwdec=vaapi ~/media/check-screen-tearing.mp4"
 
 se() { du -a ~/.scripts/* | awk '{print $2}' | fzf | xargs -r $EDITOR ;}
