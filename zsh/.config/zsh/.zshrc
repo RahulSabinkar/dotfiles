@@ -78,15 +78,15 @@ lfcd () {
 }
 # bindkey -s '^o' 'lfcd\n'
 
-bindkey -s '^z' 'nvim /home/ray/.config/zsh/.zshrc\n'
+bindkey -s '^z' 'nvim /home/${USER}/.config/zsh/.zshrc\n'
 
-bindkey -s '^t' 'cd /home/ray/.config/st && nvim config.h\n'
+bindkey -s '^t' 'cd /home/${USER}/.config/st && nvim config.h\n'
 
-bindkey -s '^a' 'nvim /home/ray/.config/aliasrc\n'
+bindkey -s '^a' 'nvim /home/${USER}/.config/aliasrc\n'
 
-bindkey -s '^n' 'cd /home/ray/.config/nvim && nvim init.vim\n'
+bindkey -s '^n' 'cd /home/${USER}/.config/nvim && nvim init.vim\n'
 
-bindkey -s '^k' 'cd /home/ray/practice/cpp && nvim program.cpp\n'
+# bindkey -s '^k' 'cd /home/${USER}/practice/cpp && nvim program.cpp\n'
 
 # Edit line in vim with ctrl-e:
 autoload edit-command-line; zle -N edit-command-line
