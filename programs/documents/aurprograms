@@ -11,3 +11,5 @@ ttf-symbola
 wttr
 zsh-autocomplete-git
 zsh-fast-syntax-highlighting
+zsh-autosuggestions
+zsh-antidote

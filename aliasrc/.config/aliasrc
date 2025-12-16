@@ -78,7 +78,7 @@ alias psi="pacman -Si"
 alias pq="pacman -Q"
 alias pqs="pacman -Qs"
 alias pqi="pacman -Qi"
-alias update="sudo pacman -Sy && sudo powerpill -Su && paru -Su"
+alias update="yay -Syu"
 
 # Shortcuts
 alias vimrc="nvim ~/.vimrc"
