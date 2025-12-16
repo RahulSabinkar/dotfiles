@@ -6,6 +6,7 @@
 export PATH="$PATH:$(du "$HOME/.local/bin/" | cut -f2 | paste -sd ':')"
 export PATH="$PATH:$(du "$HOME/.scripts/" | cut -f2 | paste -sd ':')"
 export PATH="$PATH:$(du "$HOME/intellij/bin/" | cut -f2 | paste -sd ':')"
+export PATH="$PATH:$(du "$HOME/.npm-global/bin" | cut -f2 | paste -sd ':')"
 # export PATH="$PATH:$(du "$HOME/development/eclipse/java-2020-09/eclipse" | cut -f2 | paste -sd ':')"
 
 # Default programs:
