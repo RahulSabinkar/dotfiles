@@ -16,11 +16,13 @@ Future Me, Your welcome!
 
 **The Problem:** Fresh Arch WSL is barebones. Missing `which`, `make`, `gcc`, `wget`, `unzip`, etc.
 
-**The Solution:** Install `base-devel` and the essentials immediately.
+**The Solution:** Use the automated installer.
 
 ```bash
-sudo pacman -Syu base-devel git wget curl zip unzip unrar man-db man-pages neovim zsh tree neofetch htop
+./install.sh
 ```
+
+This script handles system updates, installing `base-devel`, essential tools, and gives you the option to install a full suite of programs or a minimal set (Git, Stow, Neovim, Zsh, FZF, Ripgrep, Starship).
 
 ### 3. Neovim & Clipboard (The "Interop" Bug)
 
@@ -63,22 +65,10 @@ set clipboard+=unnamedplus
 
 ### 4. Zsh & Visuals
 
-**The Problem:** Terminal freezing on `Ctrl+s`, weird squares instead of icons, missing syntax highlighting.
+**The Problem:** Terminal showing weird squares instead of icons, missing syntax highlighting.
 
 - **The Icons:** Install **JetBrains Mono Nerd Font** on **Windows**, then set it in **Windows Terminal Settings -> Profiles -> Arch -> Appearance**.
-- **The Plugins:**
-
-```bash
-
-# Install zsh and change shell
-
-# Install official packages
-sudo pacman -S zsh-autosuggestions zsh-syntax-highlighting
-
-# Change default shell to zsh
-chsh -s $(which zsh)
-
-```
+- **The Setup:** The `install.sh` script automatically installs Zsh, Zsh plugins (autosuggestions, syntax highlighting), and changes your default shell to Zsh.
 
 _(Note: If using `fast-syntax-highlighting`, install via AUR/yay)._
 
@@ -87,18 +77,13 @@ _(Note: If using `fast-syntax-highlighting`, install via AUR/yay)._
 **The Problem:** Permission errors with `npm -g`, slow file transfer from Windows, need for Google Pro AI in terminal.
 
 - **The Golden Rule:** Always clone repos inside `~` (Linux), not `/mnt/c/` (Windows).
-- **NPM Permission Fix:**
+- **The Setup:** The `install.sh` script (via `configure_system.sh`) automatically handles:
+    - Setting NPM global prefix to `~/.npm-global` to avoid permission issues.
+    - Installing `opencode-ai` and `@google/generative-ai` globally.
+
+- **OpenCode Initialization:**
 
 ```bash
-# Avoid using sudo for global packages
-npm config set prefix '~/.npm-global'
-# Add to .zprofile: export PATH="$PATH:$HOME/.npm-global/bin"
-```
-
-- **OpenCode Setup:**
-
-```bash
-npm install -g opencode-ai
 opencode
 /connect  # Select Google Gemini, paste API Key from AI Studio
 /init     # Run inside your repo to generate AGENTS.md
