@@ -54,6 +54,23 @@ let g:airline_theme = 'angr'
 " endif
 
 "*****************************************************************************
+"" WSL Clipboard
+"*****************************************************************************
+
+let g:clipboard = {
+  \   'name': 'win32yank-wsl',
+  \   'copy': {
+  \      '+': 'win32yank.exe -i --crlf',
+  \      '*': 'win32yank.exe -i --crlf',
+  \    },
+  \   'paste': {
+  \      '+': 'win32yank.exe -o --lf',
+  \      '*': 'win32yank.exe -o --lf',
+  \   },
+  \   'cache_enabled': 0,
+  \ }
+
+"*****************************************************************************
 "" Basic Settings
 "*****************************************************************************
 
@@ -71,7 +88,7 @@ set smartindent
 set scrolloff=6 "cursor doesn't go the borders
 set encoding=utf-8
 set number "numbers at the left side
-set go=a
+" set go=a
 set mouse=a
 set incsearch "when searching, shows words as you type
 set nohlsearch "doesn't highlight searched words
@@ -312,7 +329,9 @@ nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 
-source ~/.config/nvim/cp.vim
+" source ~/.config/nvim/cp.vim
+
+
 
 "*****************************************************************************
 "" Convenience
