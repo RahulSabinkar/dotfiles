@@ -2,11 +2,15 @@
 
 # zsh profile file. Runs on login. Environmental variables are set here.
 
-# Adds `~/.local/bin` to $PATH
+# 1. Add NPM Global binaries to the START of the PATH
+#    (This ensures Linux versions override Windows versions)
+export PATH="$HOME/.npm-global/bin:$PATH"
+
+# 2. Add local scripts
 export PATH="$PATH:${$(find ~/.local/bin/ -type d -printf %p:)%%:}"
 export PATH="$PATH:${$(find ~/.local/bin/cron/ -type d -printf %p:)%%:}"
 export PATH="$PATH:${$(find ~/.scripts/ -type d -printf %p:)%%:}"
-export PATH="$PATH:$HOME/.npm-global/bin"
+
 # export PATH="$PATH:${$(find ~/intellij/bin/ -type d -printf %p:)%%:}"
 # export PATH="$PATH:$(du "$HOME/development/eclipse/java-2020-09/eclipse" | cut -f2 | paste -sd ':')"
 

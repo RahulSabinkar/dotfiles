@@ -80,6 +80,9 @@ alias pqs="pacman -Qs"
 alias pqi="pacman -Qi"
 alias update="yay -Syu"
 
+# Rank Mirrors
+alias updatemirrors='sudo reflector --country India,Singapore --latest 15 --protocol https --sort rate --verbose --save /etc/pacman.d/mirrorlist'
+
 # Shortcuts
 alias vimrc="nvim ~/.vimrc"
 alias nvimrc="nvim ~/.config/nvim/init.vim"
@@ -92,5 +95,8 @@ alias cfu="nvim ~/.config/newsboat/urls"
 # Other Shortcuts
 alias game="ka kdeconnectd redshift-gtk lxpolkit dunst mailspring"
 alias screentest="mpv --no-config --video-sync=display-resample --hwdec=vaapi ~/media/check-screen-tearing.mp4"
+
+# MD to PDF
+alias md2pdf="md-to-pdf --config-file ~/.config/md-to-pdf/config.js"
 
 se() { du -a ~/.scripts/* | awk '{print $2}' | fzf | xargs -r $EDITOR ;}
